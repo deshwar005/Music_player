@@ -21,7 +21,7 @@ function Right() {
 
                   {Songs?.map((data)=>{
                     return(
-                      <Sidemusic img={data.image}  songname={data.album}/>
+                      <Sidemusic key={data.id} img={data.image}  songname={data.album} author={data.artist}/>
                     );
                   })}
                
