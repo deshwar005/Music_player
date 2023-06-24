@@ -1,0 +1,45 @@
+.header{
+    margin-top: 30PX;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+.profile > img{
+    width: 30px;
+    margin-top: 1vh;
+}
+.name{
+    margin-top: 1.8vh;
+    width: 20%;
+    margin-left: 30PX;
+}
+.search > input{
+    border: none;
+    border-radius: 10px;
+    height: 20px;
+    padding: 10px;
+    width: 600px;
+    margin: 0px 20px;
+    margin-right: 80px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.settings > img{
+    width: 30px;
+    margin-top: 0.5vh;
+}
+@media only screen and (max-width: 900px) {
+    .search > input{
+        width:70% ;
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .header{
+        margin-top: 30PX;
+        width: 90%;
+        display: flex;
+        padding: 10px;
+    }
+    .search{
+        width: 70%;
+    }
+}

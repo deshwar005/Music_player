@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .left{
+        display: none;
+    }
+  }
