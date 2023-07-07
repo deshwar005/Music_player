@@ -9,6 +9,7 @@ function Home() {
         <div className='main'>
          <div class="container">
          <Left className="left"/>
+         
         <Header/>
         <Right/>
         </div>

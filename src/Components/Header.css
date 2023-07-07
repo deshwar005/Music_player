@@ -1,8 +1,21 @@
 .header{
+padding: 10px;
+display: flex;
+flex-direction: column;
+}
+.new_header{
     margin-top: 30PX;
-    width: 100%;
     display: flex;
+    justify-content: space-around;
     padding: 10px;
+ 
+}
+.artist{
+    display: flex;
+text-align: center;
+justify-content: space-between;
+overflow-x: scroll;
+overflow: hidden;
 }
 .profile > img{
     width: 30px;
@@ -46,3 +59,22 @@
         width: 70%;
     }
 }
+
+.Boxes {
+    display: flex;
+    overflow-x:scroll;
+    align-items: center;
+    width: 100vh;
+    margin: 10px 10px;
+    gap: 10px;
+  }
+  
+  .artist {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 10px;
+    transition: .5s;
+  }
+  .Boxes::-webkit-scrollbar{
+        display: none;
+  }

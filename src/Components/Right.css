@@ -1,5 +1,5 @@
 .right{
-    width: 35%;
+    width: 20%;
     margin-top: 2%;
     background-color: white;
     height: 90vh;
@@ -35,7 +35,7 @@ justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 width: 90%;
 }
-.img img{
+.img_right img{
     width: 50px;
 
     height: 100%;

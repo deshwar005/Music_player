@@ -17,3 +17,8 @@
         display: none;
     }
   }
+
+  .flex{
+    display: flex;
+    flex-direction: column;
+  }
