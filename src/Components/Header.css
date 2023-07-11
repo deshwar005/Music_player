@@ -58,6 +58,14 @@ overflow: hidden;
     .search{
         width: 70%;
     }
+    .Boxes {
+        display: flex;
+        overflow-x:scroll;
+        align-items: center;
+        width: 100%!important;
+        margin: 10px 10px;
+        gap: 10px;
+      }
 }
 
 .Boxes {

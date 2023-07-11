@@ -1,5 +1,6 @@
 import React from 'react';
 import './Sidemusic.css';
+import play_img from './img/playimg.svg'
 function Sidemusic({img,songname,author}) {
     return (
 
@@ -9,6 +10,9 @@ function Sidemusic({img,songname,author}) {
             <div className='title'>   {songname}</div>
             <div className='author'> {author}</div>
      
+        </div>
+        <div className='playbutton'>
+        <img src={play_img}alt=""></img>
         </div>
         </div>
     

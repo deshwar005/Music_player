@@ -26,7 +26,8 @@
     }
 .component{
     display: flex;
-justify-content: space-between;
+justify-content: center;
+align-items: center;
     text-align: center;
     text-align: left;
     padding: 10px;
@@ -43,6 +44,9 @@ width: 90%;
     border-radius: 10%;
 }
 
+.playbutton{
+    width: 5%;
+}
 
 
 @media only screen and (max-width: 900px) {
