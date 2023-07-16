@@ -1,16 +1,16 @@
 import React,{useState} from 'react';
 import './Sidemusic.css';
 import play_img from './img/playimg.svg'
+import pause from './img/pause-solid.svg'
 import { useDispatch } from 'react-redux';
 import setSongUrl from './Actions';
-import { useSelector } from 'react-redux';
 
 function Sidemusic({img,songname,author,song}) {
+    const [Playing,SetPlaying]= useState(false);
 
     const dispatch = useDispatch();
-    const songUrl = useSelector((state) => state.songUrl);
     const onSetSongUrl = (songUrl) => {
-        dispatch(setSongUrl(songUrl));
+        dispatch(setSongUrl(songUrl,img,Playing));
       };
     return (
 
@@ -22,8 +22,10 @@ function Sidemusic({img,songname,author,song}) {
      
         </div>
         <div className='playbutton'>
-        <img src={play_img}alt="" onClick={()=>{ 
+        <img src={Playing?pause:play_img}alt="" onClick={()=>{ 
             onSetSongUrl(song);
+            SetPlaying(!Playing);
+            // console.log(Playing);
             }}></img>
         </div>
         </div>

@@ -8,8 +8,8 @@ import gear from './img/gear.png'
 import Search from './img/search.png'
 function Left() {
     return (
-<div class="left">
-<div class="logo">
+<div className="left">
+<div className="logo">
   Beats
   </div>
   <div className="nav">

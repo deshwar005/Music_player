@@ -7,12 +7,14 @@ import Header from './Header';
 function Home() {
     return (
         <div className='main'>
-         <div class="container">
+         <div className="container">
          <Left className="left"/>
          
         <Header/>
         <Right/>
+
         </div>
+        
         <Bottom/>
         </div>
      

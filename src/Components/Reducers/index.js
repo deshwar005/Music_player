@@ -1,6 +1,7 @@
 const initialState = {
-  imgurl:null,
+    imgurl:null,
     songUrl: null,
+    songstate:false,
   };
   
   const reducer = (state = initialState, action) => {
@@ -8,7 +9,9 @@ const initialState = {
       case 'SET_SONG_URL':
         return {
           ...state,
-          songUrl: action.payload,
+          imgurl: action.payload.imgurl,
+          songUrl: action.payload.songUrl,
+          songstate:action.payload.songstate
         };
       default:
         return state;
