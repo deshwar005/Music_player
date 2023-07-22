@@ -3,7 +3,10 @@ import './Bottom.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faStepBackward, faStepForward } from '@fortawesome/free-solid-svg-icons';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import setSongUrl from './Actions';
 function Bottom() {
+    const dispatch = useDispatch();
     const audioRef = useRef(null);
     const songUrl = useSelector((state) => state.songUrl);
     const imgurl = useSelector((state) => state.imgurl);
@@ -15,10 +18,16 @@ function Bottom() {
         }else{
             audioRef.current.play();
         }
-        
+
 
     },[songUrl,song_state]);
 
+    const pause=()=>{
+        dispatch(setSongUrl(songUrl,imgurl,!song_state));
+    };
+    const play=()=>{
+        dispatch(setSongUrl(songUrl,imgurl,!song_state));
+    };
     
     return (
         <div className="bottom">
@@ -30,7 +39,7 @@ function Bottom() {
             <div className="music-container">
             <FontAwesomeIcon icon={faStepBackward} />
           
-        { song_state?<FontAwesomeIcon icon={faPlay} />:  <FontAwesomeIcon icon={faPause} />}    
+        { song_state?<FontAwesomeIcon icon={faPlay} onClick={pause} />:  <FontAwesomeIcon icon={faPause} onClick={play} />}    
             <FontAwesomeIcon icon={faStepForward} />
             </div>
             <div>

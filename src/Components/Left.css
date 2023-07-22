@@ -12,40 +12,40 @@
     font-weight: 800;
 }
 .nav-element{
-    /* padding: 10px; */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 195px;
     border-radius: 10px;
     margin: 2rem 2rem;
-}
-
-.nav-element{
-    /* padding: 10px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin: 2rem 2rem;
+    color: gray;
+    cursor: pointer;
     transition: 0.5s;
 }
 .nav-element:hover{
-    /* padding: 10px; */
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     margin: 2rem 2rem;
+    color: black;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    
 }
+
+
 .img  > img{
     width: 30px!important;
     height: 30px!important;
-
+    color: grey;
     border-radius: 10%;
 }
 .space{
     margin-right: 1vh;
     padding: 10px;
+ }
+
+ .nav{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
  }
