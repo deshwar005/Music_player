@@ -16,7 +16,7 @@ function Home() {
         <Right/>
 
         </div>
-       {default_state=='active'?<Bottom/>:''} 
+       {default_state==='active'?<Bottom/>:''} 
        
         </div>
      

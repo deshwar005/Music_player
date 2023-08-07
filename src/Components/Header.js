@@ -8,13 +8,15 @@ const Header = () => {
         <div className="header">
             <div className='new_header'>
             <div className='profile'><img src={Home} alt=''></img></div>
-            <div className='name'>Good Morning, Guna</div>
+            <div className='name'>Good Morning, <b>Guna</b></div>
             <div className='search'><input type="text" placeholder='What do you want ?' ></input></div>
             <div className='settings'><img src={setting_icon} alt=''></img></div>
         </div>
-        <div className='artist'>
+        <div className='artist_txt'>
+            Follow Artist
         </div>
         <div className='Boxes'>
+            {/* <Artist/>
             <Artist/>
             <Artist/>
             <Artist/>
@@ -46,8 +48,7 @@ const Header = () => {
             <Artist/>
             <Artist/>
             <Artist/>
-            <Artist/>
-            <Artist/>
+            <Artist/> */}
         </div>
         </div>
     );

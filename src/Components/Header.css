@@ -23,6 +23,7 @@ overflow: hidden;
 }
 
 .name{
+    font-size: large;
     margin-top:2.8vh;
     width: 20%;
     margin-left: 30PX;
@@ -88,7 +89,13 @@ overflow: hidden;
     flex: 0 0 auto;
     white-space: nowrap;
     padding: 10px;
+    color: grey;
     transition: .5s;
+  }
+  .artist_txt{
+    font-weight: 500;
+    font-size:x-large;
+    padding: 10px;
   }
   .Boxes::-webkit-scrollbar{
         display: none;
