@@ -4,7 +4,9 @@ import Left from './Left';
 import Right from './Right';
 import Bottom from './Bottom';
 import Header from './Header';
+import { useSelector } from 'react-redux';
 function Home() {
+    var default_state= useSelector((state) => state.isplaying);
     return (
         <div className='main'>
          <div className="container">
@@ -14,8 +16,8 @@ function Home() {
         <Right/>
 
         </div>
-        
-        <Bottom/>
+       {default_state=='active'?<Bottom/>:''} 
+       
         </div>
      
     );

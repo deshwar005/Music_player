@@ -7,10 +7,11 @@ import setSongUrl from './Actions';
 
 function Sidemusic({img,songname,author,song}) {
     const [Playing,SetPlaying]= useState(false);
-
     const dispatch = useDispatch();
+    var default_state=0;
+
     const onSetSongUrl = (songUrl) => {
-        dispatch(setSongUrl(songUrl,img,Playing));
+        dispatch(setSongUrl(songUrl,img,Playing,'active'));
       };
     return (
 
@@ -25,7 +26,6 @@ function Sidemusic({img,songname,author,song}) {
         <img src={Playing?pause:play_img}alt="" onClick={()=>{ 
             onSetSongUrl(song);
             SetPlaying(!Playing);
-            // console.log(Playing);
             }}></img>
         </div>
         </div>

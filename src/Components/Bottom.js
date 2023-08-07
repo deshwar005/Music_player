@@ -12,7 +12,6 @@ function Bottom() {
     const imgurl = useSelector((state) => state.imgurl);
     const song_state = useSelector((state) => state.songstate);
     useEffect(()=>{
-        console.log(song_state);
         if(song_state){
             audioRef.current.pause();
         }else{
