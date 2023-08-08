@@ -6,3 +6,10 @@
 .artist_name{
     text-align: center;
 }
+.artist_img div{
+    width: 70px;
+    height: 70px;
+    background-size: cover !important;
+    margin: 0 auto;
+    border-radius: 31px;
+}
