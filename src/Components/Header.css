@@ -21,6 +21,9 @@ overflow: hidden;
     width: 30px;
     margin-top: 1vh;
 }
+.album{
+    margin-bottom: 21px!important;
+}
 
 .name{
     font-size: large;
@@ -110,4 +113,44 @@ overflow: hidden;
   }
   .profile{
     margin-top: 6px;
+  }
+
+  .sub{
+    display: flex;
+    height: 60%;
+    width: 100%;
+  }
+  .sub_left{
+    width: 40%;
+    font-size: x-large;
+    padding: 10px;
+    position: relative;
+  }
+  .sub_left b{
+    font-weight: 500;
+    font-size: larger;
+    margin-left: 40px;
+  }
+
+  .sub_img img{
+    border-radius: 10px;
+  }
+  .sub_img{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+  .sub_left{
+    overflow-y: scroll;
+    height: 520px;
+    width: 40%;
+  }
+  .sub_left::-webkit-scrollbar{
+    overflow-y: scroll;
+    height: 520px;
+    width: 40%;
   }
