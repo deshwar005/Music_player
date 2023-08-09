@@ -4,6 +4,10 @@
     background-color: white;
     height: 90vh;
     text-align: center;
+    overflow-y: scroll;
+}
+.right::-webkit-scrollbar{
+    display: none;
 }
 .right-heading{
     text-align: center;

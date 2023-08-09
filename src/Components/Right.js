@@ -25,6 +25,7 @@ function Right() {
               key={data.id} // Add the unique "key" prop here
               img={data.image}
               songname={data.album}
+              title={data.title}
               author={data.artist}
               song={data.song}
             />

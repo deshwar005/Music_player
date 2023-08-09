@@ -1,6 +1,6 @@
 const SET_SONG_URL = 'SET_SONG_URL';
 
-const setSongUrl = (songUrl,imageurl,state,isplaying) => ({
+const setSongUrl = (isplaying,imageurl,songUrl,state) => ({
   type: SET_SONG_URL,
   payload: {
     isplaying:isplaying,

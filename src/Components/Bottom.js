@@ -11,21 +11,23 @@ function Bottom() {
     const songUrl = useSelector((state) => state.songUrl);
     const imgurl = useSelector((state) => state.imgurl);
     const song_state = useSelector((state) => state.songstate);
+    const title_playing = useSelector((state) => state.isplaying);
     useEffect(()=>{
         if(song_state){
-            audioRef.current.pause();
-        }else{
             audioRef.current.play();
+        }else{
+            audioRef.current.pause();
         }
-
 
     },[songUrl,song_state]);
 
     const pause=()=>{
-        dispatch(setSongUrl(songUrl,imgurl,!song_state));
+        dispatch(setSongUrl(title_playing,imgurl,songUrl,true));
+    
     };
     const play=()=>{
-        dispatch(setSongUrl(songUrl,imgurl,!song_state));
+        dispatch(setSongUrl(title_playing,imgurl,songUrl,false));
+    
     };
     
     return (
@@ -38,7 +40,7 @@ function Bottom() {
             <div className="music-container">
             <FontAwesomeIcon icon={faStepBackward} />
           
-        { song_state?<FontAwesomeIcon icon={faPlay} onClick={pause} />:  <FontAwesomeIcon icon={faPause} onClick={play} />}    
+        { song_state  ?<FontAwesomeIcon icon={faPause} onClick={play} />:  <FontAwesomeIcon icon={faPlay} onClick={pause} />}    
             <FontAwesomeIcon icon={faStepForward} />
             </div>
             <div>

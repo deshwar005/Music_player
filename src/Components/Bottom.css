@@ -1,19 +1,21 @@
 
 
+
 .bottom {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgb(250 250 250 / 74%);
     position: fixed;
     bottom: -7px;
     left: 50%;
     padding: 30px;
     width: 100%;
     transform: translate(-50%,-8%);
-    background: transparent;
-    backdrop-filter: blur(6px);
+    /* background: transparent; */
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(9px);
     box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
-    
 }
 .poster{
  left: 10px;
