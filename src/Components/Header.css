@@ -66,12 +66,16 @@ overflow: hidden;
         width:70% ;
 
     }   
+    .df_img{
+      width: 5%!important;
+    }
     .settings{
       padding: 6px;
       border-radius: 10px;
-      width: 10%!important;
+      width: 20%!important;
+      height: 100%;
       padding-left: 1px;
-      margin-left: 38px;
+      margin-left: 0px!important;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       display: flex;
       justify-content: center;
@@ -81,10 +85,12 @@ overflow: hidden;
       width: 100%;
     }
     .profile{
-      width: 30%!important;
+      width: 20%!important;
+      height: 100%;
     }
     .name{
       width: 60%;
+      height: 100%;
     }
     .sub_left {
       overflow-y: scroll;
