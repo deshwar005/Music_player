@@ -10,6 +10,8 @@ flex-direction: column;
     height: 50px;
     justify-content: center;
     align-items: center;
+    background: antiquewhite;
+    border-radius: 10px;
 }
 .artist{
     display: flex;
@@ -36,8 +38,8 @@ overflow: hidden;
 .search > input{
     border: none;
     border-radius: 10px;
-    height: 20px;
-    width: 34rem;
+    height: 100%;
+    width: 80%;
     padding: 10px;
     margin: 0px 20px;
 }
@@ -55,8 +57,9 @@ overflow: hidden;
   justify-content: center;
   align-items: center;
     width: 60%;
-    border-radius: 10px;
+    background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
 }
 @media only screen and (max-width: 900px) {
     .search > input{

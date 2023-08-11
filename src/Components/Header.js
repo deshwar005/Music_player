@@ -5,42 +5,52 @@ import setting_icon from './img/setting.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import Artist from './Artist';
 const Header = () => {
-    const {loginWithRedirect, isAuthenticated, user,logout } = useAuth0();
+    const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
     return (
         <div className="header">
             <div className='new_header'>
-                <div className='profile'> 
-                {isAuthenticated ? (
-                <img src={user.picture} alt={user.name}></img>): (<img src={Home} alt='default'></img>)}
+                <div className='profile'>
+                    {isAuthenticated ? (
+                        <img src={user.picture} alt={user.name}></img>) : (<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-person-square" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
+                        </svg>)}
                 </div>
                 <div className='name'>
-                {isAuthenticated ? (
+                    {isAuthenticated ? (
                         <span><b>{user.given_name}</b></span>
                     ) : (
-                        <span><b onClick={() => loginWithRedirect()}>Login</b></span>
+                        <span><b onClick={() => loginWithRedirect()}>Click here to Login</b></span>
                     )}
-                    </div>
-                <div className='search'><input type="text" placeholder='What do you want ?' ></input></div>
-                <div className='settings'><img src={setting_icon} alt=''  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}></img></div>
+                </div>
+                <div className='search'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10%" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                        <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" fill="red" />
+                        <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+                    </svg>
+                    <input type="text" placeholder='What do you want ?' ></input>
+
+                </div>
+                <div className='settings'><img src={setting_icon} alt='' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}></img></div>
             </div>
             <div className='artist_txt'>
                 Follow Artist
             </div>
             <div className='Boxes'>
-                <Artist  url="https://www.musicianwave.com/wp-content/uploads/2020/07/Ed-Sheeran-1-415x525.jpg"  name="Ed-Sheeran"/>
-                <Artist  url="https://www.musicianwave.com/wp-content/uploads/2022/03/Billie-Eilish-365x525.jpg" name="Billie-Eilish"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Ariana-Grande-367x525.jpg"  name="Ariana-Grande"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/The-Weeknd-447x525.jpg"  name="The-Weeknd"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Taylor-Swift-350x525.jpg"  name="Taylor-Swift"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Adele-386x525.png"  name="Adele"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Justin-Bieber-367x525.jpg"  name="Justin-Bieber"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Dua-Lipa-425x525.jpg"  name="Dua-Lipa"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Charlie-Puth-377x525.jpg"  name="Charlie-Puth"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Harry-Styles-354x525.jpg"  name="Harry-Styles"  />
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Miley-Cyrus-364x525.jpg"  name="Miley-Cyrus"  />   
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Selena-Gomez-394x525.png"  name="Selena-Gomez"  />   
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Zayn-Malik-393x525.jpg"  name="Zayn-Malik"  />  
-                 <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Olivia-Rodrigo-445x525.png"  name="Olivia Rodrigo"  />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2020/07/Ed-Sheeran-1-415x525.jpg" name="Ed-Sheeran" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Billie-Eilish-365x525.jpg" name="Billie-Eilish" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Ariana-Grande-367x525.jpg" name="Ariana-Grande" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/The-Weeknd-447x525.jpg" name="The-Weeknd" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Taylor-Swift-350x525.jpg" name="Taylor-Swift" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Adele-386x525.png" name="Adele" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Justin-Bieber-367x525.jpg" name="Justin-Bieber" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Dua-Lipa-425x525.jpg" name="Dua-Lipa" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Charlie-Puth-377x525.jpg" name="Charlie-Puth" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Harry-Styles-354x525.jpg" name="Harry-Styles" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Miley-Cyrus-364x525.jpg" name="Miley-Cyrus" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Selena-Gomez-394x525.png" name="Selena-Gomez" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Zayn-Malik-393x525.jpg" name="Zayn-Malik" />
+                <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/04/Olivia-Rodrigo-445x525.png" name="Olivia Rodrigo" />
             </div>
             <div className='sub'>
 
