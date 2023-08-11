@@ -38,9 +38,9 @@ const Header = () => {
                 </div>
                 <div className='settings action'>
                     <img src={setting_icon} alt='' onClick={display_dropdown} ></img>
-                    {true ? (
-                    <div className={`menu  ${true ? "active" : ""}`}>
-                        <h3>Gunadeshwar<br /><span>Gunadeshwar</span></h3>
+                    {isAuthenticated ? (
+                    <div className={`menu ${dropdown ? "active" : ""}`}>
+                        <h3>{user.name}<br /><span>{user.given_name}</span></h3>
                         <ul>
                             <li>
                             <img src=""  alt=''/>My profile
