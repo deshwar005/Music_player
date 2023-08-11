@@ -43,20 +43,19 @@ const Header = () => {
                         <h3>{user.name}<br /><span>{user.given_name}</span></h3>
                         <ul>
                             <li>
-                            <img src=""  alt=''/><a href="#">My profile</a>
+                            <img src=""  alt=''/>My profile
                             </li>
                             <li>
-                            <img src=""  alt=''/><a href="#">Discover</a>
+                            <img src=""  alt=''/>Discover
                             </li>
                             <li>
-                            <img src=""  alt=''/><a href="#">Favorite</a>
+                            <img src=""  alt=''/>Favorite
                             </li>
                             <li>
-                            <img src=""  alt=''/><a href="#">Settings</a>
+                            <img src=""  alt=''/>Settings
                             </li>
                             <li>
-                            <img src=""  alt=''/><a href="#" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
- >Logout</a>
+                            <img src=""  alt=''/><a  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</a>
                             </li>
                         </ul>
                     </div>):('')}
