@@ -1,18 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Header.css';
 import setting_icon from './img/setting.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import Artist from './Artist';
 const Header = () => {
     const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+    const [ dropdown, Setdropdown]=useState(false);
+    const display_dropdown =()=>{
+        Setdropdown(!dropdown)
+    };
     return (
         <div className="header">
             <div className='new_header'>
                 <div className='profile'>
                     {isAuthenticated ? (
-                        <img src={user.picture} alt={user.name}></img>) : (<svg xmlns="http://www.w3.org/2000/svg"   
-                     
-                        width="100%" height="100%" fill="white" class="bi bi-person-square " viewBox="0 0 16 16">
+                        <img src={user.picture} alt={user.name}></img>) : (<svg xmlns="http://www.w3.org/2000/svg"
+
+                            width="100%" height="100%" fill="white" class="bi bi-person-square " viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                             <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
                         </svg>)}
@@ -32,7 +36,31 @@ const Header = () => {
                     <input type="text" placeholder='What do you want ?' ></input>
 
                 </div>
-                <div className='settings'><img src={setting_icon} alt='' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}></img></div>
+                <div className='settings action'>
+                    <img src={setting_icon} alt='' onClick={display_dropdown} ></img>
+                    {isAuthenticated ? (
+                    <div className={`menu ${dropdown ? "active" : ""}`}>
+                        <h3>{user.name}<br /><span>{user.given_name}</span></h3>
+                        <ul>
+                            <li>
+                            <img src=""  alt=''/><a href="#">My profile</a>
+                            </li>
+                            <li>
+                            <img src=""  alt=''/><a href="#">Discover</a>
+                            </li>
+                            <li>
+                            <img src=""  alt=''/><a href="#">Favorite</a>
+                            </li>
+                            <li>
+                            <img src=""  alt=''/><a href="#">Settings</a>
+                            </li>
+                            <li>
+                            <img src=""  alt=''/><a href="#" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+ >Logout</a>
+                            </li>
+                        </ul>
+                    </div>):('')}
+                </div>
             </div>
             <div className='artist_txt'>
                 Follow Artist
@@ -81,5 +109,6 @@ const Header = () => {
         </div>
     );
 }
+//onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
 
 export default Header;
