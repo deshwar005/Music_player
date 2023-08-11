@@ -38,9 +38,9 @@ const Header = () => {
                 </div>
                 <div className='settings action'>
                     <img src={setting_icon} alt='' onClick={display_dropdown} ></img>
-                    {isAuthenticated ? (
-                    <div className={`menu ${dropdown ? "active" : ""}`}>
-                        <h3>{user.name}<br /><span>{user.given_name}</span></h3>
+                    {true ? (
+                    <div className={`menu  ${true ? "active" : ""}`}>
+                        <h3>Gunadeshwar<br /><span>Gunadeshwar</span></h3>
                         <ul>
                             <li>
                             <img src=""  alt=''/>My profile
@@ -55,7 +55,7 @@ const Header = () => {
                             <img src=""  alt=''/>Settings
                             </li>
                             <li>
-                            <img src=""  alt='' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}/> Logout
+                            <img src=""  alt=''/> Logout
                             </li>
                         </ul>
                     </div>):('')}

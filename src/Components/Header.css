@@ -256,7 +256,10 @@
   right: -1rem;
   display: block;
   opacity: 1;
-  background: antiquewhite;
+  background: #000000;
+  color: white;
+  font-family: system-ui;
+  font-weight: 700;
   z-index: 1;
 }
 
@@ -267,7 +270,7 @@
   right: 28px;
   width: 20px;
   height: 20px;
-  background: antiquewhite;
+  background: black;
   transform: rotate(45deg);
 }
 
@@ -277,14 +280,14 @@
   font-size: 18px;
   padding: 20px 0;
   font-weight: 500;
-  color: #555;
+  color: #c32020;
   line-height: 1.5em;
 }
 
 .action .menu h3 span {
   font-size: 14px;
   color: #cecece;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .action .menu ul li {
