@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css';
-import Home from './img/home.png';
 import setting_icon from './img/setting.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import Artist from './Artist';
