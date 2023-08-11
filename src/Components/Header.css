@@ -93,6 +93,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
 
   .new_header {
@@ -179,6 +180,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .profile {
@@ -250,10 +252,12 @@
 
 .action .menu.active {
   animation: menuFadeIn 0.5s ease forwards;
-  right: 26rem;
+  top: 5rem;
+  right: -1rem;
   display: block;
   opacity: 1;
   background: antiquewhite;
+  z-index: 1;
 }
 
 .action .menu::before {
