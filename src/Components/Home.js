@@ -4,7 +4,6 @@ import Left from './Left';
 import Right from './Right';
 import Bottom from './Bottom';
 import Header from './Header';
-import { useSelector } from 'react-redux';
 function Home() {
     return (
         <div className='main'>

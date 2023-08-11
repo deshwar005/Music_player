@@ -26,7 +26,7 @@ function Sidemusic({img,songname,song,title}) {
      
         </div>
         <div className='playbutton'>
-        <img src={songstate &&  title_playing==title  ?pause:play_img}alt="" onClick={()=>{ 
+        <img src={songstate &&  title_playing===title  ?pause:play_img}alt="" onClick={()=>{ 
             onSetSongUrl(song,title);
             SetPlaying(!Playing);
             }}></img>
