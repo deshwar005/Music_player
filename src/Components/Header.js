@@ -55,7 +55,7 @@ const Header = () => {
                             <img src=""  alt=''/>Settings
                             </li>
                             <li>
-                            <img src=""  alt='' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}/> Logout
+                            <div  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</div>
                             </li>
                         </ul>
                     </div>):('')}
