@@ -3,6 +3,7 @@ import './Header.css';
 import setting_icon from './img/setting.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import Artist from './Artist';
+import { Link } from 'react-router-dom';
 const Header = () => {
     const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
     const [ dropdown, Setdropdown]=useState(false);
@@ -65,7 +66,7 @@ const Header = () => {
                 Follow Artist
             </div>
             <div className='Boxes'>
-                <Artist url="https://www.musicianwave.com/wp-content/uploads/2020/07/Ed-Sheeran-1-415x525.jpg" name="Ed-Sheeran" />
+            <Link  to={`/artist/${encodeURIComponent("Ed-Sheeran")}`}>  <Artist url="https://www.musicianwave.com/wp-content/uploads/2020/07/Ed-Sheeran-1-415x525.jpg" name="Ed-Sheeran" /></Link>
                 <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Billie-Eilish-365x525.jpg" name="Billie-Eilish" />
                 <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Ariana-Grande-367x525.jpg" name="Ariana-Grande" />
                 <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/The-Weeknd-447x525.jpg" name="The-Weeknd" />
