@@ -26,7 +26,6 @@ function Artistlist() {
 
   useEffect(() => {
     fetchSongs();
-    console.log(songs);
   }, []);
 
     return (
