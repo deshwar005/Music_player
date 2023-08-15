@@ -12,7 +12,7 @@ const artistsongs = (props) => {
                 1
              </div>
              <div  className='img'>
-                <img src={props.img}></img>
+                <img src={props.img} alt=''></img>
              </div>
            <p>{props.title}</p> 
             </div>
