@@ -3,7 +3,7 @@ import './Header.css';
 import setting_icon from './img/setting.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from 'axios';
-import Sidemusic from './Sidemusic';
+import Artistsongs from './Artistsongs';
 
 function Artistlist() {
     const [songs, setSongs] = useState([]);
@@ -18,6 +18,7 @@ function Artistlist() {
     try {
       const response = await axios.get('https://spoticy-clone.onrender.com/allsongs');
        setSongs(response.data);
+       console.log(response.data  );
       setIsLoading(false); // Data has been fetched, set isLoading to false
     } catch (error) {
       console.error('Errtrueor fetching data:', error);
@@ -29,7 +30,8 @@ function Artistlist() {
   }, []);
 
     return (
-        <div>
+    
+        <div className='aaartist'>
             <div className='new_header'>
                 <div className='profile'>
                     {isAuthenticated ? (
@@ -89,6 +91,8 @@ function Artistlist() {
 
             </div>
             <div className="artist-songs">
+
+                
         {isLoading ? (
             <h1 style={{
                 "width": "100%",
@@ -98,16 +102,18 @@ function Artistlist() {
             }}>loading...</h1>
         ) : (
           songs.map((data) => (
-            <Sidemusic
+            <Artistsongs
               key={data.id}
               img={data.image}
               songname={data.album}
               title={data.title}
               author={data.artist}
               song={data.song}
+              duration={data.duration}
             />
           ))
         )}
+
       </div>
 
         </div>

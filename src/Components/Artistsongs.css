@@ -1,0 +1,56 @@
+
+.artistsong{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    transition: .8s;
+}
+
+.artistsong:hover{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gray;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.sub_song{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sub_section{
+    width: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.sub_duration{
+    width: 10%;
+}
+.img_sub{
+    width: 40px!important;
+    height: 40px!important;
+    color: grey;
+    border-radius: 10%;
+}
+.img > img {
+    width: 40px!important;
+    height: 40px!important;
+    color: grey;
+    border-radius: 10%;
+}
+
+.sub_section p{
+    display: inline-block;
+    width: 174px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
