@@ -361,10 +361,13 @@
 
 .artist-songs{
   width: 100%;
-  height: 70%;
+  height: 75%;
   background: #002D62;
   border-radius: 10px;
   padding: 10px;
   color: white;
   overflow-y: scroll;
+}
+.artist-songs::-webkit-scrollbar {
+  display: none;
 }
