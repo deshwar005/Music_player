@@ -17,6 +17,9 @@
   background: antiquewhite;
   border-radius: 10px;
 }
+.aaartist{
+  width: 55%;
+}
 
 .artist {
   display: flex;
@@ -79,6 +82,9 @@
   .search>input {
     width: 70%;
 
+  }
+  .aaartist{
+    width: 100%;
   }
 
   .df_img {
