@@ -9,10 +9,10 @@
     position: fixed;
     bottom: -7px;
     left: 50%;
+    height: 8%;
     padding: 30px;
     width: 100%;
     transform: translate(-50%,-8%);
-    /* background: transparent; */
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(9px);
     box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;

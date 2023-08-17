@@ -64,4 +64,10 @@
         overflow: hidden;
         white-space: nowrap;
     }
+    .sub_song{
+        width: -webkit-fill-available;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 }
