@@ -9,7 +9,7 @@ const artistsongs = (props) => {
 
             <div className='sub_song'>
              <div className='number'>
-                1
+               {props.id}
              </div>
              <div  className='img'>
                 <img src={props.img} alt=''></img>

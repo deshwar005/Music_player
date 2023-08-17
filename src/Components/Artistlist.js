@@ -13,6 +13,7 @@ function Artistlist() {
     const display_dropdown =()=>{
         Setdropdown(!dropdown)
     };
+    var i = 1;
 
   const fetchSongs = async () => {
     try {
@@ -103,6 +104,7 @@ function Artistlist() {
         ) : (
           songs.map((data) => (
             <Artistsongs
+              id={i++}
               key={data.id}
               img={data.image}
               songname={data.album}

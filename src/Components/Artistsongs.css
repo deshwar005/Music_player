@@ -58,4 +58,10 @@
     .artistsong,.artistsong:hover{
         font-size: smaller;
     }
+    .sub_section{
+        display: none;
+        width: 20%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 }
