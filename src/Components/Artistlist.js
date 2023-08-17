@@ -7,7 +7,7 @@ import Artistsongs from './Artistsongs';
 
 function Artistlist() {
     const [songs, setSongs] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
     const [ dropdown, Setdropdown]=useState(false);
     const display_dropdown =()=>{

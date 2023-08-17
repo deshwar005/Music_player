@@ -6,7 +6,9 @@
   display: flex;
   flex-direction: column;
 }
-
+.links{
+  text-decoration: none;
+}
 .new_header {
   margin-top: 30PX;
   display: flex;
@@ -85,6 +87,7 @@
   }
   .aaartist{
     width: 100%;
+    padding: 10px;
   }
 
   .df_img {
@@ -107,6 +110,12 @@
 
   .new_header {
     width: 100%;
+    align-items: center;
+    background: #faebd7;
+    border-radius: 10px;
+    height: 62px;
+    justify-content: center;
+    margin-top: 0px!important;
   }
 
   .profile {
@@ -131,7 +140,6 @@
   }
 
   .header {
-    margin-top: 30PX;
     width: 100%;
     display: flex;
     padding: 10px;
