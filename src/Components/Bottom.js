@@ -18,6 +18,9 @@ function Bottom() {
         }else{
             audioRef.current.pause();
         }
+        console.log(song_state);
+        console.log(title_playing);
+
 
     },[songUrl,song_state]);
 
