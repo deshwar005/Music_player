@@ -18,7 +18,7 @@ function Bottom() {
         }else{
             audioRef.current.pause();
         }
-    },[songUrl]);
+    },[songUrl,song_state]);
 
     const pause=()=>{
         dispatch(setSongUrl(title_playing,imgurl,songUrl,true));
