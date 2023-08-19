@@ -5,24 +5,22 @@ import Right from './Right';
 import Bottom from './Bottom';
 import Header from './Header';
 import Artistlist from './Artistlist';
-import { useLocation } from 'react-router-dom'; // Import useLocation from React Router
+import { useLocation } from 'react-router-dom';
 
 function Home() {
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
   const artistPathPattern = /^\/artist\//;
 
   const [showHeader, setShowHeader] = useState(true);
 
-
-
   useEffect(() => {
-
     if (artistPathPattern.test(location.pathname)) {
-      setShowHeader(false); // Hide the header if the artist path is matched
+      setShowHeader(false);
     } else {
-      setShowHeader(true); // Show the header for other paths
+      setShowHeader(true);
     }
-  }, [location.pathname]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]); // Include location.pathname here
 
   return (
     <div className='main'>

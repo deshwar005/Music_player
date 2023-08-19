@@ -1,6 +1,5 @@
 import './App.css';
 import Home from './Components/Home';
-import Artistpage from './Components/Artistpage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
