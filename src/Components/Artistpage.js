@@ -8,14 +8,14 @@ import Artistlist from './Artistlist';
 function Artistpage() {
     return (
         <div className='main'>
-         <div className="container">
+         {/* <div className="container">
          <Left className="left"/>
          <Artistlist/>
         <Right/>
 
         </div>
       <Bottom/>
-       
+        */}
         </div>
     );
 }

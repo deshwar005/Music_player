@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home/>}/>
-        <Route path='/artist/:artistName' element={<Artistpage/>}/>
+        <Route path='/artist/:artistName' element={<Home/>}/>
       </Routes>
     </BrowserRouter>
   );

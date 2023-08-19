@@ -66,7 +66,7 @@ const Header = () => {
                 Follow Artist
             </div>
             <div className='Boxes'>
-            <Link className='links' to={`/artist/${encodeURIComponent("Ed-Sheeran")}`}>  <Artist url="https://www.musicianwave.com/wp-content/uploads/2020/07/Ed-Sheeran-1-415x525.jpg" name="Ed-Sheeran" /></Link>
+            <Link className='links'  to={`/artist/${encodeURIComponent("Ed-Sheeran")}`} >  <Artist url="https://www.musicianwave.com/wp-content/uploads/2020/07/Ed-Sheeran-1-415x525.jpg" name="Ed-Sheeran" /></Link>
                 <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Billie-Eilish-365x525.jpg" name="Billie-Eilish" />
                 <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/Ariana-Grande-367x525.jpg" name="Ariana-Grande" />
                 <Artist url="https://www.musicianwave.com/wp-content/uploads/2022/03/The-Weeknd-447x525.jpg" name="The-Weeknd" />
