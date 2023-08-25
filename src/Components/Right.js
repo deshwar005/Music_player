@@ -28,6 +28,7 @@ function Spinner() {
 }
 
 function Right() {
+  var i=0;
   const [songs, setSongs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -54,12 +55,13 @@ function Right() {
         ) : (
           songs.map((data) => (
             <Sidemusic
-              key={data.id}
+              key={i++}
               img={data.image}
               songname={data.album}
               title={data.title}
               author={data.artist}
               song={data.song}
+              songlist={songs}
             />
           ))
         )}
