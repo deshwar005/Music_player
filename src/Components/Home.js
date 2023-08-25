@@ -24,7 +24,7 @@ function Home() {
 
   return (
     <div className='main'>
-      <div className="container">
+      <div className="containers">
         <Left className="left" />
         {showHeader ? <Header /> : <Artistlist />}
         <Right />

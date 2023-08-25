@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
 }
-.container{
+.containers{
     display: flex;
     justify-content: space-between;
 }
 
 @media only screen and (max-width: 900px) {
-    .container{
+    .containers{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
