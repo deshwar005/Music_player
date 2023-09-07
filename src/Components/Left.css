@@ -1,8 +1,7 @@
 .left{
-    width: 20%;
-    margin-top: 2%;
-    background-color: white;
-    height: 90vh;
+    width: 13%;
+    background-color: #0b2a49;
+    height: 100vh;
 }
 .logo{
     text-align: center;
@@ -10,32 +9,49 @@
     margin: 1rem 1rem;
     font-size: 30px;
     font-weight: 800;
+    background-color: transparent;
+    color: white;
+    text-align: start;
+    DISPLAY: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
 }
 .nav-element{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 195px;
+    /* justify-content: center; */
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    color: white;
     border-radius: 10px;
-    margin: 2rem 2rem;
+    margin: 10px 10px;
     color: gray;
     cursor: pointer;
     transition: 0.5s;
 }
+.holder{
+    display: flex;
+    align-items: center;
+
+}
 .nav-element:hover{
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     border-radius: 10px;
-    margin: 2rem 2rem;
-    color: black;
+    margin: 10px 10px;
+    /* color: black; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+.nav-text{
+    color: white;
+}
 
-
-.img  > img{
-    width: 30px!important;
-    height: 30px!important;
+.img_sidebar  > img{
+    width: 28px!important;
     color: grey;
     border-radius: 10%;
 }
