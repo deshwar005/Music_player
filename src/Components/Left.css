@@ -23,14 +23,16 @@
     align-items: center;
     /* justify-content: center; */
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     padding: 10px;
     color: white;
     border-radius: 10px;
     margin: 10px 10px;
-    color: gray;
     cursor: pointer;
     transition: 0.5s;
+}
+.img_sidebar :hover{
+    background-color: rgb(22, 40, 56);
 }
 .holder{
     display: flex;
@@ -40,15 +42,15 @@
 .nav-element:hover{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     border-radius: 10px;
     margin: 10px 10px;
-    /* color: black; */
+    color: black;
+    background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
 }
-.nav-text{
-    color: white;
-}
+
+
 
 .img_sidebar  > img{
     width: 28px!important;
