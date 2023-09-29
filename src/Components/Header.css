@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 .header {
+  width: 80%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -10,7 +11,6 @@
   text-decoration: none;
 }
 .new_header {
-  margin-top: 30PX;
   display: flex;
   padding: 10px;
   height: 62px;
@@ -20,7 +20,10 @@
   border-radius: 10px;
 }
 .aaartist{
-  width: 55%;
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .artist {

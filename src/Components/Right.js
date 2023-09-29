@@ -3,6 +3,10 @@ import './Right.css';
 import Sidemusic from './Sidemusic';
 import axios from 'axios';
 
+const arr=["https://media.tenor.com/q0LOTp2lumIAAAAC/cat-listening-to-music.gif",
+"https://media.tenor.com/IZH_k7F9aqcAAAAi/music.gif",
+"https://media.tenor.com/9SFSfC2n0lkAAAAC/head-phones-music.gif",
+"https://media.tenor.com/NxBsieLL1vMAAAAC/dancing-anirudh-ravichander.gif"];
 // Define a simple spinner component
 function Spinner() {
   return <div className="spinner">
@@ -32,6 +36,7 @@ function Right() {
   const [songs, setSongs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+
   const fetchSongs = async () => {
     try {
       const response = await axios.get('https://spoticy-clone.onrender.com/allsongs');
@@ -47,6 +52,7 @@ function Right() {
   }, []);
 
   return (
+
     <div className="right">
       <div className="right-heading">Yours Friends</div>
       <div className="list-user">
@@ -66,7 +72,14 @@ function Right() {
           ))
         )}
       </div>
+      <div className='gif-animation' >
+
+        <img src={arr[Math.floor(Math.random()*(arr.length))]}>
+        </img>
+      </div>
+
     </div>
+    
   );
 }
 
