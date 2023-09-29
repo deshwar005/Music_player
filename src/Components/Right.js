@@ -74,7 +74,7 @@ function Right() {
       </div>
       <div className='gif-animation' >
 
-        <img src={arr[Math.floor(Math.random()*(arr.length))]}>
+        <img src={arr[Math.floor(Math.random()*(arr.length))]} alt="none">
         </img>
       </div>
 
