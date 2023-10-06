@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 import Left from './Left';
 import Right from './Right';
-import Bottom from './Bottom';
 import Header from './Header';
 import Artistlist from './Artistlist';
 import { useLocation } from 'react-router-dom';

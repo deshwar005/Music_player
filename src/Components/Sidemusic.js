@@ -14,7 +14,7 @@ function Sidemusic({ img, songname, song, title,author }) {
 
 
     const play = (songurl,title) =>{
-        if(states.isplaying && title!=states.songname ){
+        if(states.isplaying && title!==states.songname ){
             dispatch(setSongdetail(title,author,img, songurl,true ));
         }else{
             dispatch(setSongdetail(title,author,img, songurl,!states.isplaying ));
@@ -34,7 +34,7 @@ function Sidemusic({ img, songname, song, title,author }) {
             <div className='playbutton'>
               
               
-                {states.isplaying && states.songname==title  ? (<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="40" fill="red" className="bi bi-pause-circle-fill" viewBox="0 0 16 16"  onClick={() => {
+                {states.isplaying && states.songname===title  ? (<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="40" fill="red" className="bi bi-pause-circle-fill" viewBox="0 0 16 16"  onClick={() => {
                         play(song, title);
                       
                     }}>

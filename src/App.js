@@ -1,6 +1,5 @@
 import './App.css';
 import Home from './Components/Home';
-import Musicplayer from './Components/Musicplayer'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {

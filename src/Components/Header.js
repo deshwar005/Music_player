@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import './Header.css';
 import setting_icon from './img/setting.png';
 import { useAuth0 } from "@auth0/auth0-react";
@@ -11,7 +11,6 @@ const Header = () => {
     const display_dropdown =()=>{
         Setdropdown(!dropdown)
     };
-    const states = useSelector((state) => state);
     return (
         <div className="header">
             <div className='new_header'>

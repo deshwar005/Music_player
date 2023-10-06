@@ -79,7 +79,6 @@ export default function MusicPlayerSlider() {
 
 
     const [duration, setDuration] = useState(0);
-    const [Audiovolume,setAudiovolume]=useState(0.5);
 
     const play=()=>{
         dispatch(setSongdetail(states.songname,states.singer,states.imgurl, states.songurl,true ));
@@ -161,9 +160,6 @@ const playbefore = () => {
         console.log(value/100);
     }
 
-    useEffect(()=>{
-        console.log(states);
-    },[states])
 
     useEffect(()=>{
         if(states.songurl!=null){
@@ -190,13 +186,13 @@ const playbefore = () => {
             };
         }
         console.log('in');
-        if(states.isplaying==true){
+        if(states.isplaying===true){
             audioRef.current.play();
         }else{
             audioRef.current.pause();
         }
 
-    },[states.songurl])
+    },[states])
 
     function formatDuration(value) {
         const minutes = Math.floor(value / 60);
@@ -324,7 +320,7 @@ const playbefore = () => {
                     <VolumeDownRounded htmlColor={lightIconColor} />
                     <Slider
                         aria-label="Volume"
-                        defaultValue={Audiovolume*100}
+                        defaultValue={5*100}
                         onChange={handlevolumechange}
                         sx={{
                             color: theme.palette.mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.87)',
