@@ -29,7 +29,6 @@ function Home() {
         {showHeader ? <Header /> : <Artistlist />}
         <Right />
       </div>
-      <Bottom />
     </div>
   );
 }

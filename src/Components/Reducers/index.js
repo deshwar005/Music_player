@@ -1,20 +1,29 @@
 const initialState = {
+    songname:null,
+    singer:null,
     imgurl:null,
-    songUrl: null,
-    songstate:false,
+    songurl: null,
     isplaying:null,
+    all:[]
   };
   
   const reducer = (state = initialState, action) => {
     switch (action.type) {
-      case 'SET_SONG_URL':
+      case 'SET_SONG_DETAIL':
         return {
           ...state,
           isplaying:action.payload.isplaying,
           imgurl: action.payload.imgurl,
-          songUrl: action.payload.songUrl,
-          songstate:action.payload.songstate
+          songurl: action.payload.songurl,
+          singer:action.payload.singer,
+          songname:action.payload.songname,
         };
+
+        case 'SET_ALL_SONGS':
+          return{
+            ...state,
+            all:action.payload.all
+          };
       default:
         return state;
     }

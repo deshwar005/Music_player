@@ -1,14 +1,14 @@
-const SET_SONG_URL = 'SET_SONG_URL';
+const SET_SONG_URL = 'SET_SONG_DETAIL';
 
-const setSongUrl = (isplaying,imageurl,songUrl,state,songlist) => ({
+const setSongdetail = (songname,singer,imageurl,songurl,isplaying) => ({
   type: SET_SONG_URL,
   payload: {
-    isplaying:isplaying,
+    songname:songname,
+    singer:singer,
     imgurl: imageurl,
-    songUrl: songUrl,
-    songstate:state,
-    songlist:songlist
+    songurl: songurl,
+    isplaying:isplaying,
   },
 });
 
-export default setSongUrl;
+export default setSongdetail;

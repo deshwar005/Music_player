@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './Right.css';
 import Sidemusic from './Sidemusic';
 import axios from 'axios';
+import Musicplayer from './Musicplayer';
+import { useDispatch } from 'react-redux';
+import Songlist from './Actions/Songlist'
 
-const arr=["https://media.tenor.com/q0LOTp2lumIAAAAC/cat-listening-to-music.gif",
-"https://media.tenor.com/IZH_k7F9aqcAAAAi/music.gif",
-"https://media.tenor.com/9SFSfC2n0lkAAAAC/head-phones-music.gif",
-"https://media.tenor.com/NxBsieLL1vMAAAAC/dancing-anirudh-ravichander.gif"];
-// Define a simple spinner component
+
 function Spinner() {
   return <div className="spinner">
 
@@ -36,11 +35,15 @@ function Right() {
   const [songs, setSongs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const dispatch = useDispatch();
+
 
   const fetchSongs = async () => {
     try {
       const response = await axios.get('https://spoticy-clone.onrender.com/allsongs');
        setSongs(response.data);
+       console.log(response.data);
+       dispatch(Songlist(response.data));
       setIsLoading(false); // Data has been fetched, set isLoading to false
     } catch (error) {
       console.error('Errtrueor fetching data:', error);
@@ -73,9 +76,7 @@ function Right() {
         )}
       </div>
       <div className='gif-animation' >
-
-        <img src={arr[Math.floor(Math.random()*(arr.length))]} alt="none">
-        </img>
+<Musicplayer/>
       </div>
 
     </div>

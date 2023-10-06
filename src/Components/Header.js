@@ -1,15 +1,17 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './Header.css';
 import setting_icon from './img/setting.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import Artist from './Artist';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Header = () => {
     const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
     const [ dropdown, Setdropdown]=useState(false);
     const display_dropdown =()=>{
         Setdropdown(!dropdown)
     };
+    const states = useSelector((state) => state);
     return (
         <div className="header">
             <div className='new_header'>
