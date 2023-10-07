@@ -52,7 +52,7 @@ function Right() {
 
   useEffect(() => {
     fetchSongs();
-  }, []);
+  }, [fetchSongs]);
 
   return (
 
