@@ -192,7 +192,7 @@ const playbefore = () => {
             audioRef.current.pause();
         }
 
-    },[states])
+    },[states,dispatch])
 
     function formatDuration(value) {
         const minutes = Math.floor(value / 60);
