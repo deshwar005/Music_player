@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,useCallback} from 'react';
 import './Right.css';
 import Sidemusic from './Sidemusic';
 import axios from 'axios';
@@ -38,17 +38,17 @@ function Right() {
   const dispatch = useDispatch();
 
 
-  const fetchSongs = async () => {
+  const fetchSongs = useCallback(async () => {
     try {
       const response = await axios.get('https://spoticy-clone.onrender.com/allsongs');
-       setSongs(response.data);
-       console.log(response.data);
-       dispatch(Songlist(response.data));
-      setIsLoading(false); // Data has been fetched, set isLoading to false
+      setSongs(response.data);
+      console.log(response.data);
+      dispatch(Songlist(response.data));
+      setIsLoading(false);
     } catch (error) {
-      console.error('Errtrueor fetching data:', error);
+      console.error('Error fetching data:', error);
     }
-  };
+  }, [dispatch]);
 
   useEffect(() => {
     fetchSongs();
