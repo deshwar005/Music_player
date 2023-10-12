@@ -74,6 +74,24 @@
         width: 80%;
         text-align: left;
         }
+        .gif-animation{
+        background: white;
+        padding: 10px;
+        width: 100%;
+        height: -moz-fit-content;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        /* top: 90%; */
+        left: 50%;
+        bottom: -15%;
+        transform: translate(-50%, -50%);
+        }
+        .css-1fb8ote{
+width: 100%!important;
+        }
   }
   #loading-bar-spinner.spinner {
     left: 50%;
