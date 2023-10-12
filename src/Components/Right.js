@@ -34,6 +34,7 @@ function Right() {
   var i=0;
   const [songs, setSongs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [Showfooter,setShowfooter]=useState(false);
 
   const dispatch = useDispatch();
 
@@ -75,10 +76,14 @@ function Right() {
           ))
         )}
       </div>
-      <div className='gif-animation' >
-<Musicplayer/>
-      </div>
+      <div className='gif-animation' >{
+        Showfooter?<Musicplayer/>:""
+      }
 
+      </div>
+      <div className='floater' onClick={()=>setShowfooter(!Showfooter)}>
+        M
+      </div>
     </div>
     
   );

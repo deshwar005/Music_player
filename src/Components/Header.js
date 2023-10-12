@@ -1,15 +1,32 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect,useCallback} from 'react';
 import './Header.css';
 import setting_icon from './img/setting.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import Artist from './Artist';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 const Header = () => {
     const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
     const [ dropdown, Setdropdown]=useState(false);
     const display_dropdown =()=>{
         Setdropdown(!dropdown)
     };
+    const [songs, setSongs] = useState([]);
+
+
+    const fetchSongs = useCallback(async () => {
+        try {
+          const response = await axios.get('https://spoticy-clone.onrender.com/allsongs');
+          setSongs(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      }, []);
+    
+      useEffect(() => {
+        fetchSongs();
+      }, [fetchSongs]);
     return (
         <div className="header">
             <div className='new_header'>
@@ -104,8 +121,38 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="sub_right">
+
+                    <div style={{color:"white"}} className='artist_all'>
+                        {songs.map(({title,image,album,duration})=>{
+                            return(
+
+                            <div className='album_cover'>
+
+
+                                <div className='album_img'>
+                                    <img src={image} alt=''></img>
+                                    </div>
+
+                                    <div className='album_title'>
+                                        <div className='album_sm'>
+                                            {album}
+                                            </div>
+                                            <div className='album_lg'>
+                                            {title}
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div className='album_duration' style={{color:"black"}}>
+                                            {duration}
+                                            </div>
+                            </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
+            
         </div>
     );
 }
