@@ -5,9 +5,12 @@ import axios from 'axios';
 import Musicplayer from './Musicplayer';
 import { useDispatch } from 'react-redux';
 import Songlist from './Actions/Songlist'
+import { useSelector } from 'react-redux';
 
 
 function Spinner() {
+
+
   return <div className="spinner">
 
 <svg xmlns="http://www.w3.org/2000/svg"  width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -31,6 +34,9 @@ function Spinner() {
 }
 
 function Right() {
+
+  const states = useSelector((state) => state);
+
   var i=0;
   const [songs, setSongs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -81,9 +87,12 @@ function Right() {
       }
 
       </div>
-      <div className='floater' onClick={()=>setShowfooter(!Showfooter)}>
-        M
-      </div>
+      {states.songurl!=null?
+            <div className='floater' onClick={()=>setShowfooter(!Showfooter)}>
+            M
+          </div>
+      :''}
+
     </div>
     
   );

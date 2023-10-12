@@ -84,10 +84,10 @@
         align-items: center;
         justify-content: center;
         position: fixed;
-        /* top: 90%; */
         left: 50%;
         bottom: -150px;
         transform: translate(-50%, -50%);
+  transition: opacity 0.6s linear;
         }
         .css-1fb8ote{
 width: 100%!important;
