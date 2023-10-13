@@ -24,11 +24,21 @@ function Left() {
 </svg></div> <div className="nav-text"> <h6 >Home</h6></div> </div><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
 </svg></div>  </div>
-<div className="nav-element active">  <div className='holder'> <div className="img_sidebar space">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="bi bi-activity" viewBox="0 0 16 16">
+<div className="nav-element active" onClick={()=>{ window.location.href = 'https://music711upload.netlify.app/'}}>  <div className='holder'> 
+
+<div className="img_sidebar space"> 
+
+ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="bi bi-activity" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
-</svg></div> <div className="nav-text"> <h6 >activity</h6></div> </div><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="bi bi-arrow-right" viewBox="0 0 16 16">
+</svg></div>
+ <div className="nav-text"><h6 >Upload</h6>
+ </div> 
+ 
+ </div><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg></div>  </div>
+</svg></div> 
+
+ </div>
 <div className="nav-element active">  <div className='holder'> <div className="img_sidebar space"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="bi bi-bell" viewBox="0 0 16 16">
   <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
 </svg></div> <div className="nav-text"> <h6 >bell</h6></div> </div><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="bi bi-arrow-right" viewBox="0 0 16 16">
