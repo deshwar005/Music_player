@@ -75,7 +75,7 @@
         text-align: left;
         }
         .gif-animation{
-        background: white;
+        background: transparent;
         padding: 10px;
         width: 100%;
         height: -moz-fit-content;
@@ -127,7 +127,7 @@ width: 100%!important;
 } */
 
 .gif-animation{
-    background: white;
+    background: transparent;
     padding: 10px;
     width: 100%;
     height:fit-content;
