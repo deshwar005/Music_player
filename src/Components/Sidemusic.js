@@ -27,7 +27,7 @@ function Sidemusic({ img, songname, song, title,author }) {
             <div className="img_right"> <img src={img} alt=""></img></div>
             <div className="playing">
 
-                <div className='title'>   {title}</div>
+                <div className='title'>   {title.substring(0,20)}...</div>
                 <div className='author'> {songname}</div>
 
             </div>

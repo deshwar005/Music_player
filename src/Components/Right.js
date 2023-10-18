@@ -82,11 +82,11 @@ function Right() {
           ))
         )}
       </div>
-      <div className='gif-animation' >{
-        Showfooter?<Musicplayer/>:""
-      }
-
+      <div className={`gif-animation ${Showfooter ? '' : 'minus'}`}>
+        <Musicplayer/>
       </div>
+
+  
       {states.songurl!=null?
             <div className='floater' onClick={()=>setShowfooter(!Showfooter)}>
             M

@@ -22,6 +22,7 @@
 .aaartist{
   width: 65%;
   padding: 10px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -361,11 +362,12 @@
   color: white;
   font-family: system-ui;
   font-weight: 700;
-  font-size: 63px;
+  font-size: 30px;
   text-align: left;
   padding: 10px;
   width: 100%;
-  margin-top: 7rem;
+  display: flex;
+  align-items: flex-end;
 }
 
 .bg-dark {
@@ -378,7 +380,7 @@
 
 .artist-songs{
   width: 100%;
-  height: 75%;
+  height: 80%;
   background: #002D62;
   border-radius: 10px;
   padding: 10px;
