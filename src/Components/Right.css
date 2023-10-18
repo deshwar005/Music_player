@@ -138,3 +138,7 @@ width: 100%!important;
 .minus{
     z-index: -10;
 }
+.promotion{
+    background-color: #00C8B1;
+    z-index: 10;
+}
