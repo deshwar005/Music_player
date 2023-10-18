@@ -137,6 +137,7 @@ width: 100%!important;
 }
 .minus{
     z-index: -10;
+    display: none;
 }
 .promotion{
     background-color: #00C8B1;
