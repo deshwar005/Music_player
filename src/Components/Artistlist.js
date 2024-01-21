@@ -10,6 +10,10 @@ function Artistlist() {
   const [isLoading, setIsLoading] = useState(true);
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   const [dropdown, Setdropdown] = useState(false);
+  const [Artistdetails,setArtistdetails] = useState({
+    name:'',
+    image:''
+  });
   const display_dropdown = () => {
     Setdropdown(!dropdown)
   };
@@ -17,14 +21,25 @@ function Artistlist() {
 
   const fetchSongs = async () => {
     try {
-      const response = await axios.get('https://spoticy-clone.onrender.com/allsongs');
+      const url = window.location.href;
+      const artistNameFromURL = url.split("/artist/")[1];
+      const lowercaseArtistName = artistNameFromURL.toLowerCase();
+      const decodedString = decodeURIComponent(lowercaseArtistName);
+      const normalizedString = decodedString.replace(/\b\w/g, (char) => char.toUpperCase());
+      const encodedArtistName = encodeURIComponent(normalizedString);
+  
+      const response = await axios.get(`https://spoticy-clone.onrender.com/artist/${encodedArtistName}`);
       setSongs(response.data);
-      console.log(response.data);
+      const artistrequest = await axios.get("https://spoticy-clone.onrender.com/all-artist");
+      const filteredArtist = artistrequest.data.find((artist) => artist.name === encodedArtistName);
+      setArtistdetails(filteredArtist);
       setIsLoading(false); // Data has been fetched, set isLoading to false
     } catch (error) {
-      console.error('Errtrueor fetching data:', error);
+      console.error('Error fetching data:', error);
+      // Handle errors, you might want to set an error state or show an error message
     }
   };
+  
 
   useEffect(() => {
     fetchSongs();
@@ -85,9 +100,9 @@ function Artistlist() {
       </div>
 
       <div className='bg-dark'>
-        <div className='atd'>
+      <div className='atd' style={{ backgroundImage: `url(${Artistdetails.image})` }}>
           <div className='atid'>
-            Anirudh Ravichander
+            {Artistdetails.name}
           </div>
 
         </div>

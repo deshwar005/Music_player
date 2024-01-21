@@ -6,7 +6,7 @@ function Artist(props) {
         <div className='artist' >
             <div className='artist_img'>
                  <div style={{ background: `url(${props.url})`}}></div>
-                <p>{props.name}</p>
+                <p className='artisttxt'>{props.name}</p>
             </div>
         </div>
     );

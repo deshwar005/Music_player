@@ -13,3 +13,8 @@
     margin: 0 auto;
     border-radius: 31px;
 }
+.artisttxt{
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
